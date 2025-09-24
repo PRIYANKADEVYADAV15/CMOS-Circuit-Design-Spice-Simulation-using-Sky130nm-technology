@@ -15,7 +15,11 @@
     - [L5 Pinch-off region condition](#L5-Pinch-off-region-condition)
     - [L6 Drain current model for saturation region of operation](#L6-Drain-current-model-for-saturation-region-of-operation)
   - [Introduction to SPICE](#Introduction-to-SPICE)
-
+    - [L1 Basic SPICE setup](#L1-Basic-SPICE-setup)
+    - [L2 Circuit description in SPICE syntax](#L2-Circuit-description-in-SPICE-syntax)
+    - [L3 Define Technology parameters](#L3-Define-Technology-parameters)
+    - [L4 First SPICE simulation](#L4-First-SPICE-simulation)
+    - [L5 SPICE lab with Sky130 models](#L5-SPICE-lab-with-Sky130-models)
 
 # NgspiceSky130-Day1-Basics of NMOS Drain Current(Id) vs Drain-to-source Voltage(Vds)
 
@@ -162,6 +166,89 @@ When (Vgs-Vt)>=Vds, It is in "Linear region".</br>
 <img width="683" height="443" alt="image" src="https://github.com/user-attachments/assets/bdfa5383-5b3b-452f-b437-0768814f2551" />
 
 ### L4 SPICE conclusion to resistive operation
+We need to find the impact of Vgs and Vds on the drain current equation. We will consider different values of Vgs and Vds. If we consider different values of Vgs, under what condition the device will remain in Linear region depends on (Vgs-Vt) should be greater than Vds.</br>
+
+<img width="591" height="172" alt="image" src="https://github.com/user-attachments/assets/d9735c9f-3a26-49aa-bc9b-62e64d65babe" />
+
+Now the main question arises, How do we calculate Id for different values of 'Vgs' and at every value of 'Vgs', sweep Vds till (Vgs-Vt) using linear equation for Id?</br>
+For this we need to do SPICE simulations.</br>
+
+### L5 Pinch-off region condition
+There is also a Region of operation when Drain-source voltage exceeds the value (Vgs-Vt), the region of operation is called "Saturation Region".
+We know the channel voltage is Vgs-Vds. Now, we will increase the Vds.</br>
+
+<img width="1367" height="625" alt="image" src="https://github.com/user-attachments/assets/d29ecff9-3641-49c7-9348-fa7537ff7118" />
+
+When Vgs-Vds is greater than Vt, there will be a conducting channel.</br>
+When Vgs-Vds is equal to Vt, we will see at drain side, just Inversion has happened as it is equal to Vt, so channel will start disappearing at drain side.</br>
+
+<img width="1380" height="611" alt="image" src="https://github.com/user-attachments/assets/b51e39ef-093f-463d-8faa-7c6bb23cc68d" />
+<img width="1352" height="621" alt="image" src="https://github.com/user-attachments/assets/8d325d80-10d4-47e3-aed0-2caaf0715a36" />
+
+Now when the channel starts to disappear, is termed as "Pinch off region"</br>
+
+<img width="1492" height="602" alt="image" src="https://github.com/user-attachments/assets/40146460-641e-4f89-a950-acebeba103e3" />
+
+When Vgs-Vds<Vt, we will not see any channel present at drain side.</br>
+
+<img width="1310" height="582" alt="image" src="https://github.com/user-attachments/assets/e62baac0-53e1-4c61-a9d6-e26a0a4b8ec1" />
+
+This condition is termed as "Saturation region", when the mosfet is saturated and cannot do anything further.</br>
+
+<img width="391" height="102" alt="image" src="https://github.com/user-attachments/assets/4c0aca6a-e230-47d1-9e30-9416785487be" />
+
+### L6 Drain current model for saturation region of operation
+In saturation region, the channel voltage will remain constant as 'Vgs-Vt', and the drain current will not depend on Vds.</br>
+To get drain current equation in saturation region we will replace Vds as Vgs-Vt.</br>
+
+<img width="467" height="360" alt="image" src="https://github.com/user-attachments/assets/3df0adef-9616-499c-97de-477da403178b" />
+
+We can now see that according to the equation, the mosfet acts as perfect current source. But this is not true, when we increase Vds we will that Depletion region at drain increases and so channel length further reduces.Therefore, we see a slight dependency of Vds over Id</br>
+
+<img width="1476" height="586" alt="image" src="https://github.com/user-attachments/assets/899bf2cb-f752-43ad-8750-5fc9d6b62f50" />
+
+This is called "Channel Length Modulation".</br>
+
+<img width="876" height="168" alt="image" src="https://github.com/user-attachments/assets/b3d388c1-7074-49c9-a019-7d0ff212271f" />
+
+## Introduction to SPICE
+
+### L1 Basic SPICE setup
+First let us look into the SPICE setup.</br>
+
+<img width="1412" height="611" alt="image" src="https://github.com/user-attachments/assets/5872cd9a-70d1-46cf-9fe4-f5247f8d3415" />
+
+Some parameters are constant, and directly coming from the foundaries we don't have to derive them. These are circiled in yellow.</br>
+
+<img width="1313" height="591" alt="image" src="https://github.com/user-attachments/assets/c7f8c503-a596-40a7-85e8-b00b1eef4cf9" />
+
+<img width="922" height="536" alt="image" src="https://github.com/user-attachments/assets/260175cb-7abc-4fc6-a332-6b73b7954cae" />
+
+So, when we feed the SPICE model parameters and SPICE netlist intp the SPICE software, we get the device characteristics in terms of Id vs Vds with different values of Vgs.</br>
+
+**SPICE Netlist**
+We need to feed the device into SPICE engine in certain manner, the circuit equivalent of given mosfet is as shown below. </br>
+
+<img width="1262" height="585" alt="image" src="https://github.com/user-attachments/assets/ec870ea4-f7ce-4e99-939a-d6e8646c499e" />
+
+### L2 Circuit description in SPICE syntax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
