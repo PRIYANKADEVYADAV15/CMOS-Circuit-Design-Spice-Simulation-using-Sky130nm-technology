@@ -232,6 +232,30 @@ We need to feed the device into SPICE engine in certain manner, the circuit equi
 <img width="1262" height="585" alt="image" src="https://github.com/user-attachments/assets/ec870ea4-f7ce-4e99-939a-d6e8646c499e" />
 
 ### L2 Circuit description in SPICE syntax
+Now we will write the syntax for this particular circuit in SPICE netlist. To do that we need to follow some steps-
+* **Define Nodes**
+  
+  <img width="653" height="410" alt="image" src="https://github.com/user-attachments/assets/726a94e6-1333-41dc-a4c0-d9c766b00f9b" />
+
+* **Give names to the node**
+* **Write the code**
+  `since modfet has 4 terminals, it is lying between 4 different nodes, similarly resistor is lying between 2 nodes.`
+
+<img width="1307" height="418" alt="image" src="https://github.com/user-attachments/assets/fe360627-afb9-41d7-917d-95b7ac8ca6b7" />
+<img width="1211" height="371" alt="image" src="https://github.com/user-attachments/assets/5d8f624b-296a-499a-9cc2-c9fd0946fb52" />
+<img width="1213" height="412" alt="image" src="https://github.com/user-attachments/assets/c7d30d08-94c4-4891-95b3-4fc8c95fa3c9" />
+<img width="1132" height="381" alt="image" src="https://github.com/user-attachments/assets/b9dad3c6-2cc6-48a5-9409-a7eb90f39301" />
+<img width="1197" height="385" alt="image" src="https://github.com/user-attachments/assets/e091f59b-d7b8-4913-9ee3-0a2cc5d324f0" />
+
+The fashion in which it is written is "Drain", "Gate", "Source", and "Substrate" (DGSS).
+
+
+
+
+
+
+
+
 
 
 
