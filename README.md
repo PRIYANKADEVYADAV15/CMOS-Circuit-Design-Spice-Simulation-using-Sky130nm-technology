@@ -20,6 +20,15 @@
     - [L3 Define Technology parameters](#L3-Define-Technology-parameters)
     - [L4 First SPICE simulation](#L4-First-SPICE-simulation)
     - [L5 SPICE lab with Sky130 models](#L5-SPICE-lab-with-Sky130-models)
+- [NgspiceSky130-Day2-Velocity saturation and basics of CMOS inverter VTC](#NgspiceSky130-Day2-Velocity-saturation-and-basics-of-CMOS-inverter-VTC)
+  - [SPICE simulation for lower nodes and velocity saturation effect](#SPICE-simulation-for-lower-nodes-and-velocity-saturation-effect)
+    - [L1 SPICE simulation for lower nodes](#L1-SPICE-simulation-for-lower-nodes)
+    - [L2 Drain current vs gate voltage for long and short channel device](#L2-Drain-current-vs-gate-voltage-for-long-and-short-channel-device)
+    - [L3 Velocity saturation at lower and higher electric fields](#L3-Velocity-saturation-at-lower-and-higher-electric-fields)
+    - [L4 Velocity saturation drain current model](#L4-Velocity-saturation-drain-current-model)
+    - [L5 Labs Sky130 Id-Vgs](#L5-Labs-Sky130-Id-Vgs)
+    - [L6 Labs Sky130 Vt](#L6-Labs-Sky130-Vt)
+  - [CMOS voltage transfer characteristics (VTC)](#CMOS-voltage-transfer-characteristics-(VTC))
 
 # NgspiceSky130-Day1-Basics of NMOS Drain Current(Id) vs Drain-to-source Voltage(Vds)
 
@@ -316,8 +325,9 @@ Inside `design` --> open day1 file.</br>
 
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/e6eabf93-da6c-478a-8ba2-37d440e2b048" />
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/67dcf536-1896-4202-a378-ec81ec3a717b" />
+Above we see Vdd varying from 0 to 1.8 volts with step size of 0.1V and Vgs sweeping from 0 to 1.8V and with step size of 0.2V
 
-Let us the spice simulations:
+Let us do the spice simulations:
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/51cf629c-17ad-4daa-b627-62abf3cc65c7" />
 
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/820c2138-e28f-4c1a-a3a1-d54669e4576a" />
@@ -336,7 +346,13 @@ To check the value of Id for corresponding Vds and Vgs, just left click and see.
 If we go inside `models` folder, we will see `all.spice` file. If we open it we will see the scale of Width and Length.</br>
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/0f6dfb1f-7668-466a-8ba7-c9ac5beacb77" />
 
-We can see that W and L values are in microns.
+We can see that W and L values are in microns.</br>
+
+# NgspiceSky130-Day2-Velocity saturation and basics of CMOS inverter VTC
+
+## SPICE simulation for lower nodes and velocity saturation effect
+
+### L1 SPICE simulation for lower nodes
 
 
 
