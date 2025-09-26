@@ -369,11 +369,47 @@ Let us compare the two simulations we did.
 
 <img width="1385" height="547" alt="image" src="https://github.com/user-attachments/assets/0dd21cb8-3868-4074-909f-accde3fa2556" />
 
-There are some Observations:
+**There are some Observations:**
 * If we see Id values for different Vgs and for Vds=2.5V, there is a quadratic dependency of Id on Vgs. Whereas for short channel device, at Vds=2.5V, the current is increasing linearly due to velocity saturation.</br>
 
 <img width="1385" height="547" alt="image" src="https://github.com/user-attachments/assets/3eb690d9-a38c-4c97-a9b2-2b0b5148ff63" />
 <img width="747" height="540" alt="image" src="https://github.com/user-attachments/assets/7f388d3d-9e7c-45ad-b70b-65a1d846f961" />
+
+Now we will plot graph of Id vs Vgs and sweeping Vds or keeping Vds constant = 2.5V.</br>
+
+<img width="855" height="442" alt="image" src="https://github.com/user-attachments/assets/658d2ba4-4e01-4e20-9a01-e949f3f88cb9" />
+
+The syntax explains that what will be there on left hand side will be sweeped at every value on right hand side. For example here for every value of Vdd, Vin will be sweeped. The plot we get is quadratic, it is only when Vds=2.5V </br>
+
+<img width="776" height="641" alt="image" src="https://github.com/user-attachments/assets/fd8321e8-6235-4c84-aa42-411747b0f599" />
+
+Let us see the same effect for short channel device. For L=0.25 micron.
+<img width="1332" height="592" alt="image" src="https://github.com/user-attachments/assets/ffba63a2-5ce1-42c5-a7f0-0f61fe194d12" />
+
+### L3 Velocity saturation at lower and higher electric fields
+For short channel we will see more of a linear behaviour as the Vgs increases. This is due to velocity saturation effect.</br>
+
+<img width="1332" height="592" alt="image" src="https://github.com/user-attachments/assets/95aa490e-3dc0-4875-b74a-836c1ae07486" />
+So, for lower node we will have 4 regions of operations: **Cut Off, Linear, Saturation and Velocity Saturation**
+
+**Velocity Saturation**
+We know velocity and electric field are related to each other with equation `v=uE`, where v is velocity, E is electric field and u is mobility. Velocity increases linearly with electric field over certain electric field value after which it gets saturated. This is due to scattering at higher fields and mobility decreases. </br>
+
+<img width="973" height="506" alt="image" src="https://github.com/user-attachments/assets/57f60dd0-b579-4e67-962d-03c21c430e49" />
+
+Velocity saturation happens for higher gate-source voltages.</br>
+
+<img width="1011" height="470" alt="image" src="https://github.com/user-attachments/assets/bf8911ed-1708-4c95-adc1-f6816f66a689" />
+
+### L4 Velocity saturation drain current model
+
+
+
+
+
+
+
+
 
 
 
