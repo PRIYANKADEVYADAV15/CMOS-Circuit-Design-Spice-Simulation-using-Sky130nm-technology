@@ -353,6 +353,31 @@ We can see that W and L values are in microns.</br>
 ## SPICE simulation for lower nodes and velocity saturation effect
 
 ### L1 SPICE simulation for lower nodes
+We have seen the curve for Id vs Vds, for different values of Vgs.</br>
+
+<img width="1297" height="658" alt="image" src="https://github.com/user-attachments/assets/c10158ab-7588-4862-96a0-19125d4a3e25" />
+
+In the above graph the area left of curve; Vds=Vgs-Vt is Linear region as current is increasing linearly, the area right is Saturation region with slight increase in current due to velocity saturation and below is the Cut off region.Also this case is when the channel length is large.</br>
+
+Now we are taking different W and L, but the ration of W/L is same as previous, so the Id should not change. But this is not the case practically.</br>
+Below is the spice deck, where only the values of W and L is changed, rest everything remains same.</br>
+
+<img width="872" height="442" alt="image" src="https://github.com/user-attachments/assets/09eec98c-92a0-409e-a6c5-5b2a18e8289d" />
+
+### L2 Drain current vs gate voltage for long and short channel device
+Let us compare the two simulations we did.
+
+<img width="1385" height="547" alt="image" src="https://github.com/user-attachments/assets/0dd21cb8-3868-4074-909f-accde3fa2556" />
+
+There are some Observations:
+* If we see Id values for different Vgs and for Vds=2.5V, there is a quadratic dependency of Id on Vgs. Whereas for short channel device, at Vds=2.5V, the current is increasing linearly due to velocity saturation.</br>
+
+<img width="1385" height="547" alt="image" src="https://github.com/user-attachments/assets/3eb690d9-a38c-4c97-a9b2-2b0b5148ff63" />
+<img width="747" height="540" alt="image" src="https://github.com/user-attachments/assets/7f388d3d-9e7c-45ad-b70b-65a1d846f961" />
+
+
+
+
 
 
 
