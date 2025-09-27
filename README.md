@@ -470,6 +470,19 @@ It comes at around 0.76V.
 ## CMOS voltage transfer characteristics (VTC)
 
 ### L1 MOSFET as a switch
+We will now look at the device parameters from the switch point of view.</br>
+
+<img width="907" height="508" alt="image" src="https://github.com/user-attachments/assets/6bb70912-c36e-4031-bf01-7e05871b28a8" />
+The above shows MOSFET as a switch:
+* When |Vgs|<Vt, device is OFF and it acts as open switch
+* When |Vgs|>Vt, device is ON and it acts as closed switch
+
+<img width="1220" height="685" alt="image" src="https://github.com/user-attachments/assets/48869cbb-daee-4a3b-96a8-bdd0fb45a79f" />
+
+### L2 Introduction to standard MOS voltage current parameters
+We are trying to get the equivalent circuit of CMOS when Vin is 'high' and 'low', so that we can get the Voltage Transfer Characteristics (VTC) and therefore calculate the delay.
+
+
 
 
 
