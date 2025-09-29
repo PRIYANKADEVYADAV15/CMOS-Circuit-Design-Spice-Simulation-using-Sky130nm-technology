@@ -514,7 +514,18 @@ We have seen various internal voltages, but actually in terms of user's perspect
 * We will fix the Vgs values as shown below
   <img width="372" height="237" alt="image" src="https://github.com/user-attachments/assets/081d616c-e17f-4741-8a96-0d5eae2b2b9a" />
   
-* We know that Vgsp= Vin-Vdd, So we get the above values.
+* We know that Vgsp= Vin-Vdd, So we get the above values.So we get Vin = Vgsp+Vdd, we are trying to convert all the voltages as function of Vin and Vout.
+* We will try to plot the graph of PMOS in terms of Idsn, the plot will be as shown below. We can see that the corresponding Vin value of Vgsp is being plotted as shown in the above table.
+
+  <img width="871" height="443" alt="image" src="https://github.com/user-attachments/assets/cd415d3f-042b-460e-8314-4bb28d50d663" />
+
+### L5 Step2 & Step3- Convert PMOS and NMOS drain-source-voltage to Vout
+Now we be converting the Vdsp and function of output voltage Vin. We know **Vdsp = Vout-Vdd**.</br>
+Let us convert Vdsp into Vout. So to get Vout there is a shift of Vdd towards left hand side.</br>
+
+<img width="1333" height="391" alt="image" src="https://github.com/user-attachments/assets/c9709e57-c876-4521-9ff6-88fb68f9927c" />
+
+We can see that whenever Vout=2V that means Vgsp=0V and Vdd=2V (given), then The current is zero and capacitor at the output is discharged.
   
 
 
