@@ -56,8 +56,15 @@
     - [L5 Sky130 Noise margin labs](#L5-Sky130-Noise-margin-labs)
 - [NgspiceSky130-Day5-CMOS power supply and device variation robustness evaluation](#NgspiceSky130-Day5-CMOS-power-supply-and-device-variation-robustness-evaluation)
   - [Static behaviour evaluation-CMOS inverter robustness-Power supply variation](#Static-behaviour-evaluation-CMOS-inverter-robustness-Power-supply-variation)
-    - [L1
+    - [L1 Smart SPICE simulations for power supply variations](#L1-Smart-SPICE-simulations-for-power-supply-variations)
+    - [L2 Advantages and disadvantages using low supply voltage](#L2-Advantages-and-disadvantages-using-low-supply-voltage)
+    - [L3 Sky130 Supply variation Labs](#L3-Sky130-Supply-variation-Labs)
   - [Static behaviour evaluation-CMOS inverter robustness-Device variation](#Static-behaviour-evaluation-CMOS-inverter-robustness-Device-variation)
+    - [L1 Sources of variation - Etching process](#L1-Sources-of-variation---Etching-process)
+    - [L2 Sources of variation - Oxide thickness](#L2-Sources-of-variation---Oxide-thickness)
+    - [L3 Smart SPICE simulation for device variations](#L3-Smart-SPICE-simulation-for-device-variations)
+    - [L4 Conclusion](#L4-Conclusion)
+    - [L5 Sky130 device variations labs](#L5-Sky130-device-variations-labs)
 
 # NgspiceSky130-Day1-Basics of NMOS Drain Current(Id) vs Drain-to-source Voltage(Vds)
 
@@ -819,8 +826,14 @@ We are taking the W/L ratios of PMOS to NMOS as 2.77 and sweeping the Vin from 0
 
 We will take the point where the slope is -1 ; x axis will give VIL and VIH, whereas y axis will give VOH and VOL.
 
-Noise margin NH = VOH - VIH = 1.70952-0.98778 = 0.72
-Noise margin NL = VIL - VOL = 0.7733-0.09523 = 0.67807
+**Noise margin NH = VOH - VIH = 1.70952-0.98778 = 0.72** </br>
+**Noise margin NL = VIL - VOL = 0.7733-0.09523 = 0.67807** </br>
+
+# NgspiceSky130-Day5-CMOS power supply and device variation robustness evaluation
+
+## Static behaviour evaluation-CMOS inverter robustness-Power supply variation
+
+### L1 Smart SPICE simulations for power supply variations
 
 
 
