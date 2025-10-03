@@ -877,17 +877,17 @@ The initial supply voltage is 1.8V and we are reducing it with the step of 0.2V,
 
 <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/af291d32-1484-4d6b-8291-dabc5b70df65" />
 We will calculte the Gain: </br>
-* **Vdd=1.8V**
+* **Vdd=1.8V** </br>
 
   <img width="292" height="61" alt="image" src="https://github.com/user-attachments/assets/0f2c56cc-5fb4-4c1e-9e49-0e7ee75b964b" />
 
-  |Gain| = 7.6229
+  |Gain| = 7.6229 </br>
 
 * **Vdd=0.8V**
 
   <img width="267" height="52" alt="image" src="https://github.com/user-attachments/assets/112695f4-b69a-4c76-bd41-a066a08ac6b7" />
 
-  |Gain| = 9.3844
+  |Gain| = 9.3844 </br>
 
 ## Static behaviour evaluation-CMOS inverter robustness-Device variation
 
